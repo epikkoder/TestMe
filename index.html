@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>TestMe</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+    <style>
+        body {
+            background-color: darkgray;
+        }
+
+        .container div {
+            margin: 10px 0 10px 0;
+        }
+
+        #question {
+            background-color: rgb(233, 233, 233);
+        }
+
+        #answer {
+            background-color: lightyellow;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="col-sm-12" id="question"></div>
+        <div class="col-sm-12" id="displayAnswer">
+            <button type="button" class="btn btn-info" id="displayAnswer">Show Answer</button>
+        </div>
+        <div class="col-sm-12" id="answer"></div>
+        <div class="col-sm-12">
+            <button type="button" class="btn btn-primary" id="random">
+                Get random question/answer
+            </button>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script>
+        let questionnaire = [];
+        let item = {};
+        const question = document.querySelector("#question");
+        const answer = document.querySelector("#answer");
+        const showAnswerBtn = document.querySelector("#displayAnswer");
+        const randomBtn = document.querySelector("#random");
+        const questionnaireUrl = 'questionnaire.json';
+
+        const fetchFile = file => fetch(file)
+            .then(blob => blob.json()) // This one returns a Promise, it happens asynchronously, so you have to do what you want in the then()
+
+        const initData = (questionnaireUrl) => fetchFile(questionnaireUrl)
+            .then(data => {
+                questionnaire = data;
+            })
+
+        const displayQuestionnaireItem = () => {
+            getRandomQuestionnaireItem();
+            question.innerHTML = item.question;
+            answer.innerHTML = item.answer;
+            hideAnswer();
+            displayShowAnswerBtn();
+        }
+
+        const hideAnswer = () => {
+            answer.style.display = 'none';
+        }
+
+        const displayAnswer = () => {
+            answer.style.display = 'block';
+            hideShowAnswerBtn();
+        }
+
+        const hideShowAnswerBtn = () => {
+            showAnswerBtn.style.display = 'none';
+        }
+
+        const displayShowAnswerBtn = () => {
+            showAnswerBtn.style.display = 'block';
+        }
+
+        const getRandomQuestionnaireItem = () => {
+            item = questionnaire[Math.floor(Math.random() * questionnaire.length)]
+        }
+
+        const initDisplay = () => {
+            showAnswerBtn.addEventListener("click", displayAnswer)
+            randomBtn.addEventListener("click", displayQuestionnaireItem)
+        }
+
+        initData(questionnaireUrl)
+            .then(displayQuestionnaireItem)
+            .then(initDisplay);
+    </script>
+</body>
+
+</html>

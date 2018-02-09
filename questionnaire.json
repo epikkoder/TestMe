@@ -1,0 +1,22 @@
+[
+    {
+        "question": "<strong>What is serialization?</strong>",
+        "answer": "<p>Packaging data for transport. Serialization is the process of converting an object into a form that can be readily transported. The <code>$.serialize()</code> method creates a text string of name/value pairs that can be sent to a server in an AJAX request. It can act on a jQuery object that has selected individual form controls, such as <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, and <code>&lt;select&gt;</code>: <code>$('input, textarea, select').serialize();</code>. It is typically easier, however, to select the <code>&lt;form&gt;</code> itself for serialization: <code>$('#formData').serialize();</code></p>"
+    },
+    {
+        "question": "<strong>What types of serialization are you familiar with?</strong>",
+        "answer": "<p><code>$.serialize()</code> - Only form elements are examined for inputs they contain. A form is serialized to a name-value pair string that can be sent to a server in an AJAX request.</p><p>Other types:<ul><li>SOAP serialization</li><li>Binary serialization</li><li>XML Serialization</li><li>JSON Serialization</li></ul></p>"
+    },
+    {
+        "question": "<strong>What are the benefits of JSON serialization over XML serialization?</strong>",
+        "answer": "<p>XML (Extensible Markup Language) serialization serializes only the public fields and property values of an object into an XML stream. XML serialization does not include type information.</p><p>The biggest reason that JSON is now being used over XML is that JSON is inherently more efficient. It is lightweight, fewer bits are being transferred, and less machine time is required to process data (on either end).</p>"
+    },
+    {
+        "question": "<strong>Write out the JSON for the following Contact object:</strong><p>Bob Smith is 30 years old and has two direct reports. They are Sally Smith, 30 y/o, and Jane Doe, 34 y/o</p>",
+        "answer": "<pre>{\n&#32;&#32;&quot;firstName&quot;:&#32;&quot;Bob&quot;,\n&#32;&#32;&quot;lastName&quot;:&#32;&quot;Smith&quot;,\n&#32;&#32;&quot;age&quot;:&#32;30,\n&#32;&#32;&quot;reports&quot;:&#32;[\n&#32;&#32;&#32;&#32;{\n&#32;&#32;&#32;&#32;&#32;&#32;&quot;firstName&quot;:&#32;&quot;Sally&quot;,\n&#32;&#32;&#32;&#32;&#32;&#32;&quot;lastName&quot;:&#32;&quot;Smith&quot;,\n&#32;&#32;&#32;&#32;&#32;&#32;&quot;age&quot;:&#32;30\n&#32;&#32;&#32;&#32;},\n&#32;&#32;&#32;&#32;{\n&#32;&#32;&#32;&#32;&#32;&#32;&quot;firstName&quot;:&#32;&quot;Jane&quot;,\n&#32;&#32;&#32;&#32;&#32;&#32;&quot;lastName&quot;:&#32;&quot;Doe&quot;,\n&#32;&#32;&#32;&#32;&#32;&#32;&quot;age&quot;:&#32;34\n&#32;&#32;&#32;&#32;}\n&#32;&#32;]\n}</pre>"
+    },
+    {
+        "question": "<strong>Write out the .NET class for that Contact object in the previous question.</strong>",
+        "answer": "<pre>public class Contact\n{\n&#32;&#32;&#32;&#32;public string FirstName {get; set;}\n&#32;&#32;&#32;&#32;public string LastName {get; set;}\n&#32;&#32;&#32;&#32;public int Age {get; set;}\n&#32;&#32;&#32;&#32;public Contact[] Reports {get; set;}\n}\n\nContact Bob = new Contact();</pre>"
+    }
+]
