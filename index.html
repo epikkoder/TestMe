@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
     <title>TestMe</title>
@@ -56,7 +56,7 @@
         const questionnaireUrl = 'questionnaire.json';
 
         const fetchFile = file => fetch(file)
-            .then(blob => blob.json()) // This one returns a Promise, it happens asynchronously, so you have to do what you want in the then()
+            .then(blob => blob.json()); // This one returns a Promise, it happens asynchronously, so you have to do what you want in the then()
 
         const initData = (questionnaireUrl) => fetchFile(questionnaireUrl)
             .then(data => {
@@ -89,12 +89,12 @@
         }
 
         const getRandomQuestionnaireItem = () => {
-            item = questionnaire[Math.floor(Math.random() * questionnaire.length)]
+            item = questionnaire[Math.floor(Math.random() * questionnaire.length)];
         }
 
         const initDisplay = () => {
-            showAnswerBtn.addEventListener("click", displayAnswer)
-            randomBtn.addEventListener("click", displayQuestionnaireItem)
+            showAnswerBtn.addEventListener("click", displayAnswer);
+            randomBtn.addEventListener("click", displayQuestionnaireItem);
         }
 
         initData(questionnaireUrl)

@@ -5,7 +5,7 @@
     },
     {
         "question": "<strong>What types of serialization are you familiar with?</strong>",
-        "answer": "<p><code>$.serialize()</code> - Only form elements are examined for inputs they contain. A form is serialized to a name-value pair string that can be sent to a server in an AJAX request.</p><p>Other types:<ul><li>SOAP serialization</li><li>Binary serialization</li><li>XML Serialization</li><li>JSON Serialization</li></ul></p>"
+        "answer": "<p><code>$.serialize()</code> - Only form elements are examined for inputs they contain. A form is serialized to a name-value pair string that can be sent to a server in an AJAX request.</p><p>Other types:</p><ul><li>SOAP serialization</li><li>Binary serialization</li><li>XML Serialization</li><li>JSON Serialization</li></ul>"
     },
     {
         "question": "<strong>What are the benefits of JSON serialization over XML serialization?</strong>",
@@ -18,5 +18,21 @@
     {
         "question": "<strong>Write out the .NET class for that Contact object in the previous question.</strong>",
         "answer": "<pre>public class Contact\n{\n&#32;&#32;&#32;&#32;public string FirstName {get; set;}\n&#32;&#32;&#32;&#32;public string LastName {get; set;}\n&#32;&#32;&#32;&#32;public int Age {get; set;}\n&#32;&#32;&#32;&#32;public Contact[] Reports {get; set;}\n}\n\nContact Bob = new Contact();</pre>"
+    },
+    {
+        "question": "<strong>How do you validate using DataAnnotations?",
+        "answer": "<ol><li>Decorate or &quot;annotate&quot; your models with a specific set of attributes that tell the .NET framework what you expect from each property.</li><li>Invoke a check of these attributes or rules at the controller level before you do anything else and return an error if the data is not valid. To check if the data was properly submitted, we invoke the check and respond appropriately.</li></ol>"
+    },
+    {
+        "question": "<strong>What namespace do these attributes live in? (i.e. What namespace do the data attributes (server validation) in .NET belong to (what library?))</strong>",
+        "answer": "<p><code>using System.ComponentModel.DataAnnotations</code></p>"
+    },
+    {
+        "question": "<strong>What are the different types of validations that these attributes let you perform?</strong>",
+        "answer": "<p>StringLength (designates max and min number of characters)</p><p>Required</p><p>Range</p><p>RegularExpression</p><p>DataType (such as email and phone number)</p><p>EnumDataType</p><p>CustomValidation</p><p>Validation (Serves as a base class for validation attributes)</p>"
+    },
+    {
+        "question": "<strong>Decorate this class to the following specs: First/Last Name should be at least 3 chars long and no more than 50, Age should be at least 18 years old.</strong>",
+        "answer": "<pre>[StringLength(50, MinimumLength = 3)]\npublic string FirstName {get; set;}\n\n[StringLength(50, MinimumLength = 3)]\npublic string LastName {get; set;}\n\n[Range(18, 120)]Model\npublic int Age {get; set;}</pre>"
     }
 ]
