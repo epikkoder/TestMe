@@ -34,5 +34,17 @@
     {
         "question": "<strong>Decorate this class to the following specs: First/Last Name should be at least 3 chars long and no more than 50, Age should be at least 18 years old.</strong>",
         "answer": "<pre>[StringLength(50, MinimumLength = 3)]\npublic string FirstName {get; set;}\n\n[StringLength(50, MinimumLength = 3)]\npublic string LastName {get; set;}\n\n[Range(18, 120)]Model\npublic int Age {get; set;}</pre>"
+    },
+    {
+        "question": "<strong>What is Model Binding? Why is it important?</strong>",
+        "answer": "<p>The ASP.NET MVC framework provides the model binding that greatly simplifies the process of data type conversion and mapping the input values to properties. The framework retrieves the data, maps data to object properties, validates the data and passes the model object to the controller as parameter. Model binding creates and populates the objects that the controller actions require.</p><p>Model binding retrieves data from requests, populates controller action parameters, takes care of the property mapping and type casting typically involved in working with ASP.NET request data.</p>"
+    },
+    {
+        "question": "<strong>What are fundamentals that a developer should consider when working to wire up model binding correctly?</strong>",
+        "answer": "<p>Have the corresponding properties in HTML <code>&lt;input&gt;</code> tags nested in <code>&lt;form&gt;</code> tags. Ensure that the &quot;name&quot; attribute matches the property in the model.</p>"
+    },
+    {
+        "question": "<strong>What are ApiControllers?</strong>",
+        "answer": "<p>ApiControllers are specialized in returning data. Provide a REST-ful API by convention.</p><p>&quot;Regular&quot; Controller - contains ActionResult classes that return a View.</p>"
     }
 ]
