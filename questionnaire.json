@@ -46,5 +46,17 @@
     {
         "question": "<strong>What are ApiControllers?</strong>",
         "answer": "<p>ApiControllers are specialized in returning data. Provide a REST-ful API by convention.</p><p>&quot;Regular&quot; Controller - contains ActionResult classes that return a View.</p>"
+    },
+    {
+        "question": "<strong>When creating a new controller, what class do you inherit from?</strong>",
+        "answer": "<p>&quot;regular&quot; Controller inherits from Controller</p><p>ApiController inherits from ApiController</p>"
+    },
+    {
+        "question": "<strong>What are the basic elements that exist in all HTML pages between the start and closing <code>&lt;html&gt;</code> tags?</strong>",
+        "answer": "<p>head</p><p>body</p>"
+    },
+    {
+        "question": "<strong>Describe the relationship between HTML, CSS, and Javascript.</strong>",
+        "answer": "<p>HTML (Hypertext Markup Language) - used for structuring content</p><p>CSS (Cascading Style Sheets) - used for applying visual styles</p><p>Javascript - interacts with and manipulate HTML</p>"
     }
 ]
