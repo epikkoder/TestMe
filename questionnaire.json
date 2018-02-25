@@ -1,70 +1,70 @@
 [
     {
-        "question": "<strong>What is serialization?</strong>",
+        "question": "What is serialization?",
         "answer": "<p>Packaging data for transport. Serialization is the process of converting an object into a form that can be readily transported. The <code>$.serialize()</code> method creates a text string of name/value pairs that can be sent to a server in an AJAX request. It can act on a jQuery object that has selected individual form controls, such as <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, and <code>&lt;select&gt;</code>: <code>$('input, textarea, select').serialize();</code>. It is typically easier, however, to select the <code>&lt;form&gt;</code> itself for serialization: <code>$('#formData').serialize();</code></p>"
     },
     {
-        "question": "<strong>What types of serialization are you familiar with?</strong>",
+        "question": "What types of serialization are you familiar with?",
         "answer": "<p><code>$.serialize()</code> - Only form elements are examined for inputs they contain. A form is serialized to a name-value pair string that can be sent to a server in an AJAX request.</p><p>Other types:</p><ul><li>SOAP serialization</li><li>Binary serialization</li><li>XML Serialization</li><li>JSON Serialization</li></ul>"
     },
     {
-        "question": "<strong>What are the benefits of JSON serialization over XML serialization?</strong>",
+        "question": "What are the benefits of JSON serialization over XML serialization?",
         "answer": "<p>XML (Extensible Markup Language) serialization serializes only the public fields and property values of an object into an XML stream. XML serialization does not include type information.</p><p>The biggest reason that JSON is now being used over XML is that JSON is inherently more efficient. It is lightweight, fewer bits are being transferred, and less machine time is required to process data (on either end).</p>"
     },
     {
-        "question": "<strong>Write out the JSON for the following Contact object:</strong><p>Bob Smith is 30 years old and has two direct reports. They are Sally Smith, 30 y/o, and Jane Doe, 34 y/o</p>",
+        "question": "Write out the JSON for the following Contact object: Bob Smith is 30 years old and has two direct reports. They are Sally Smith, 30 y/o, and Jane Doe, 34 y/o",
         "answer": "<pre>{\n&#32;&#32;&quot;firstName&quot;:&#32;&quot;Bob&quot;,\n&#32;&#32;&quot;lastName&quot;:&#32;&quot;Smith&quot;,\n&#32;&#32;&quot;age&quot;:&#32;30,\n&#32;&#32;&quot;reports&quot;:&#32;[\n&#32;&#32;&#32;&#32;{\n&#32;&#32;&#32;&#32;&#32;&#32;&quot;firstName&quot;:&#32;&quot;Sally&quot;,\n&#32;&#32;&#32;&#32;&#32;&#32;&quot;lastName&quot;:&#32;&quot;Smith&quot;,\n&#32;&#32;&#32;&#32;&#32;&#32;&quot;age&quot;:&#32;30\n&#32;&#32;&#32;&#32;},\n&#32;&#32;&#32;&#32;{\n&#32;&#32;&#32;&#32;&#32;&#32;&quot;firstName&quot;:&#32;&quot;Jane&quot;,\n&#32;&#32;&#32;&#32;&#32;&#32;&quot;lastName&quot;:&#32;&quot;Doe&quot;,\n&#32;&#32;&#32;&#32;&#32;&#32;&quot;age&quot;:&#32;34\n&#32;&#32;&#32;&#32;}\n&#32;&#32;]\n}</pre>"
     },
     {
-        "question": "<strong>Write out the .NET class for that Contact object in the previous question.</strong>",
+        "question": "Write out the .NET class for that Contact object in the previous question.",
         "answer": "<pre>public class Contact\n{\n&#32;&#32;&#32;&#32;public string FirstName {get; set;}\n&#32;&#32;&#32;&#32;public string LastName {get; set;}\n&#32;&#32;&#32;&#32;public int Age {get; set;}\n&#32;&#32;&#32;&#32;public Contact[] Reports {get; set;}\n}\n\nContact Bob = new Contact();</pre>"
     },
     {
-        "question": "<strong>How do you validate using DataAnnotations?",
+        "question": "How do you validate using DataAnnotations?",
         "answer": "<ol><li>Decorate or &quot;annotate&quot; your models with a specific set of attributes that tell the .NET framework what you expect from each property.</li><li>Invoke a check of these attributes or rules at the controller level before you do anything else and return an error if the data is not valid. To check if the data was properly submitted, we invoke the check and respond appropriately.</li></ol>"
     },
     {
-        "question": "<strong>What namespace do these attributes live in? (i.e. What namespace do the data attributes (server validation) in .NET belong to (what library?))</strong>",
+        "question": "What namespace do these attributes live in? (i.e. What namespace do the data attributes (server validation) in .NET belong to (what library?))",
         "answer": "<p><code>using System.ComponentModel.DataAnnotations</code></p>"
     },
     {
-        "question": "<strong>What are the different types of validations that these attributes let you perform?</strong>",
+        "question": "What are the different types of validations that these attributes let you perform?",
         "answer": "<p>StringLength (designates max and min number of characters)</p><p>Required</p><p>Range</p><p>RegularExpression</p><p>DataType (such as email and phone number)</p><p>EnumDataType</p><p>CustomValidation</p><p>Validation (Serves as a base class for validation attributes)</p>"
     },
     {
-        "question": "<strong>Decorate this class to the following specs: First/Last Name should be at least 3 chars long and no more than 50, Age should be at least 18 years old.</strong>",
+        "question": "Decorate this class to the following specs: First/Last Name should be at least 3 chars long and no more than 50, Age should be at least 18 years old.",
         "answer": "<pre>[StringLength(50, MinimumLength = 3)]\npublic string FirstName {get; set;}\n\n[StringLength(50, MinimumLength = 3)]\npublic string LastName {get; set;}\n\n[Range(18, 120)]Model\npublic int Age {get; set;}</pre>"
     },
     {
-        "question": "<strong>What is Model Binding? Why is it important?</strong>",
+        "question": "What is Model Binding? Why is it important?",
         "answer": "<p>The ASP.NET MVC framework provides the model binding that greatly simplifies the process of data type conversion and mapping the input values to properties. The framework retrieves the data, maps data to object properties, validates the data and passes the model object to the controller as parameter. Model binding creates and populates the objects that the controller actions require.</p><p>Model binding retrieves data from requests, populates controller action parameters, takes care of the property mapping and type casting typically involved in working with ASP.NET request data.</p>"
     },
     {
-        "question": "<strong>What are fundamentals that a developer should consider when working to wire up model binding correctly?</strong>",
+        "question": "What are fundamentals that a developer should consider when working to wire up model binding correctly?",
         "answer": "<p>Have the corresponding properties in HTML <code>&lt;input&gt;</code> tags nested in <code>&lt;form&gt;</code> tags. Ensure that the &quot;name&quot; attribute matches the property in the model.</p>"
     },
     {
-        "question": "<strong>What are ApiControllers?</strong>",
+        "question": "What are ApiControllers?",
         "answer": "<p>ApiControllers are specialized in returning data. Provide a REST-ful API by convention.</p><p>&quot;Regular&quot; Controller - contains ActionResult classes that return a View.</p>"
     },
     {
-        "question": "<strong>When creating a new controller, what class do you inherit from?</strong>",
+        "question": "When creating a new controller, what class do you inherit from?",
         "answer": "<p>&quot;regular&quot; Controller inherits from Controller</p><p>ApiController inherits from ApiController</p>"
     },
     {
-        "question": "<strong>What are the basic elements that exist in all HTML pages between the start and closing <code>&lt;html&gt;</code> tags?</strong>",
+        "question": "What are the basic elements that exist in all HTML pages between the start and closing <code>&lt;html&gt;</code> tags?",
         "answer": "<p>head</p><p>body</p>"
     },
     {
-        "question": "<strong>Describe the relationship between HTML, CSS, and Javascript.</strong>",
+        "question": "Describe the relationship between HTML, CSS, and Javascript.",
         "answer": "<p>HTML (Hypertext Markup Language) - used for structuring content</p><p>CSS (Cascading Style Sheets) - used for applying visual styles</p><p>Javascript - interacts with and manipulate HTML</p>"
     },
     {
-        "question": "<strong>What is jQuery? Is it required to build HTML pages? Is it required to build interactivity into your web pages?</strong>",
+        "question": "What is jQuery? Is it required to build HTML pages? Is it required to build interactivity into your web pages?",
         "answer": "<p>jQuery is a concise and fast Javascript library that can be used to simplify event handling, HTML document traversing, AJAX interactions and animation for speedy website development.</p><p>No, not required for interactivity</p>"
     },
     {
-        "question": "<strong>How do you capture the first time the HTML document is ready to be manipulated? Write out two different ways to accomplish this task.</strong>",
+        "question": "How do you capture the first time the HTML document is ready to be manipulated? Write out two different ways to accomplish this task.",
         "answer": "<code>$(document).ready()</code><p>All three of the following syntaxes are equivalent:</p><ul><li><code>$(document).ready(handler)</code></li><li><code>$().ready(handler)</code>(this is not recommended)</li><li><code>$(handler)</code></li></ul>"
     }
 ]
