@@ -66,5 +66,25 @@
     {
         "question": "How do you capture the first time the HTML document is ready to be manipulated? Write out two different ways to accomplish this task.",
         "answer": "<code>$(document).ready()</code><p>All three of the following syntaxes are equivalent:</p><ul><li><code>$(document).ready(handler)</code></li><li><code>$().ready(handler)</code>(this is not recommended)</li><li><code>$(handler)</code></li></ul>"
+    },
+    {
+        "question": "How many times does the &quot;document ready&quot; event fire?",
+        "answer": "<p>once</p>"
+    },
+    {
+        "question": "Describe the main differences or considerations between C# and Javascript.",
+        "answer": "<p>C# is strongly-typed language, and Javascript is a non-typed scripting language.</p>"
+    },
+    {
+        "question": "What is AJAX? When do you use it? Why would you use it?",
+        "answer": "<p>AJAX stands for <strong>A</strong>synchronous <strong>Ja</strong>vascript and <strong>X</strong>ML.</p><p>AJAX is a technique for creating fast and dynamic web pages. AJAX allows web pages to be updated asynchronously by exchanging small amounts of data with the server behind the scenes. This means that it is possible to update parts of a web page, without reloading the whole page.</p>"
+    },
+    {
+        "question": "What does it mean to be a .NET MVC application?",
+        "answer": "An application written in C# that implements the MVC design pattern, which has a high degree of separation of concern. The Model is properties of data, the Controller is business logic, and the View is for presentation."
+    },
+    {
+        "question": "Does .NET support other types of web applications?",
+        "answer": "Yes. Example: Web Forms (still some separation of concern, but all routing is gone)"
     }
 ]
