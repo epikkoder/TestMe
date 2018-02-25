@@ -58,5 +58,13 @@
     {
         "question": "<strong>Describe the relationship between HTML, CSS, and Javascript.</strong>",
         "answer": "<p>HTML (Hypertext Markup Language) - used for structuring content</p><p>CSS (Cascading Style Sheets) - used for applying visual styles</p><p>Javascript - interacts with and manipulate HTML</p>"
+    },
+    {
+        "question": "<strong>What is jQuery? Is it required to build HTML pages? Is it required to build interactivity into your web pages?</strong>",
+        "answer": "<p>jQuery is a concise and fast Javascript library that can be used to simplify event handling, HTML document traversing, AJAX interactions and animation for speedy website development.</p><p>No, not required for interactivity</p>"
+    },
+    {
+        "question": "<strong>How do you capture the first time the HTML document is ready to be manipulated? Write out two different ways to accomplish this task.</strong>",
+        "answer": "<code>$(document).ready()</code><p>All three of the following syntaxes are equivalent:</p><ul><li><code>$(document).ready(handler)</code></li><li><code>$().ready(handler)</code>(this is not recommended)</li><li><code>$(handler)</code></li></ul>"
     }
 ]
