@@ -81,10 +81,10 @@
     },
     {
         "question": "What does it mean to be a .NET MVC application?",
-        "answer": "An application written in C# that implements the MVC design pattern, which has a high degree of separation of concern. The Model is properties of data, the Controller is business logic, and the View is for presentation."
+        "answer": "<p>An application written in C# that implements the MVC design pattern, which has a high degree of separation of concern. The Model is properties of data, the Controller is business logic, and the View is for presentation.</p>"
     },
     {
         "question": "Does .NET support other types of web applications?",
-        "answer": "Yes. Example: Web Forms (still some separation of concern, but all routing is gone)"
+        "answer": "<p>Yes. Example: Web Forms (still some separation of concern, but all routing is gone)</p>"
     }
 ]
