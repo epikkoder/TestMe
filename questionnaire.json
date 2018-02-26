@@ -86,5 +86,33 @@
     {
         "question": "Does .NET support other types of web applications?",
         "answer": "<p>Yes. Example: Web Forms (still some separation of concern, but all routing is gone)</p>"
+    },
+    {
+        "question": "What are Namespaces? What are they used for?",
+        "answer": "<p>Namespaces are heavily used in C# programming in two ways. First, the .NET framework uses namespaces to organize its many classes.</p><p>Second, declaring your own namespaces can help you control the scope of class and method names in larger programming projects. Use the <code>namespace</code> keyword to declare a namespace, as in the following example:</p><pre>namespace SampleNamespace\n{\n&#32;&#32;&#32;&#32;class SampleClass\n&#32;&#32;&#32;&#32;{\n&#32;&#32;&#32;&#32;}\n}</pre>"
+    },
+    {
+        "question": "Are Namespaces a client side or server side construct?",
+        "answer": "<p>Both client and server side</p>"
+    },
+    {
+        "question": "What is a database?",
+        "answer": "<p>A database is a collection of information that is organized so that it can easily be accessed, managed, and updated.</p>"
+    },
+    {
+        "question": "What is a relational database?",
+        "answer": "<p>A relational database is a collection of data items organized as a set of formally-described tables from which data can be accessed or reassembled in many different ways without having to reorganize the database tables.</p><p>The standard user and application program interface to a relational database is the <em>structured query language</em> (SQL). SQL statements are used both for interactive queries for information from a relational database and for gathering data for reports.</p>"
+    },
+    {
+        "question": "What is a database &quot;table&quot;?",
+        "answer": "<p>A table contains one or more data categories in columns. Each row contains a unique instance of data for the categories defined by the columns.</p>"
+    },
+    {
+        "question": "What is a primary key?",
+        "answer": "<p>The PRIMARY KEY constraint uniquely identifies each record in a database table. A primary key column cannot contain NULL values. Most tables should have a primary key, and each table can have only ONE primary key.</p><p>Column or set of columns that uniquely identifies a record.</p>"
+    },
+    {
+        "question": "What is a foreign key?",
+        "answer": "<p>A FOREIGN KEY in one table points to a PRIMARY KEY in another table.</p>"
     }
 ]
