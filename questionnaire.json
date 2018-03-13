@@ -114,5 +114,41 @@
     {
         "question": "What is a foreign key?",
         "answer": "<p>A FOREIGN KEY in one table points to a PRIMARY KEY in another table.</p>"
+    },
+    {
+        "question": "How many of each can one table have?",
+        "answer": "<p>primary key: one</p><p>foreign key: Microsoft says, &quot;Although a table can contain an unlimited number of FOREIGN KEY constraints, the recommended maximum is 253. Depending on the hardware configuration hosting SQL Server, specifying additional FOREIGN KEY constraints may be expensive for the query optimizer to process.&quot;</p>"
+    },
+    {
+        "question": "What is a SQL Injection Attack?",
+        "answer": "<p>SQL injection is an attack in which malicious code is inserted into strings that are later passed to an instance of SQL Server for parsing and execution in order to effect the execution of predefined SQL commands.</p><p>A SQL injection attack is a form of attack that comes from user input that has not been checked to see that it is valid. The objective is to fool the database system into running malicious code that will reveal sensitive information or otherwise compromise the server.</p>"
+    },
+    {
+        "question": "How do you protect yourself against these?",
+        "answer": "<p>Using a combination of stored procedures and parameters. Stored procedures alone will not protect against SQL injection attacks because you still need to use them correctly.</p>"
+    },
+    {
+        "question": "What is a SQL Server stored procedure?",
+        "answer": "<p>Prepared SQL code that you save to perform repetitive tasks or to perform database operations used in conjunction with web applications.</p>"
+    },
+    {
+        "question": "What language is used to write stored procedures?",
+        "answer": "<p>SQL & T-SQL</p>"
+    },
+    {
+        "question": "What language do you use to communicate with the database?",
+        "answer": "<p>SQL</p>"
+    },
+    {
+        "question": "What is the generic name of the library used in .NET that is used to communicate with databases?",
+        "answer": "<p>ADO.NET</p>"
+    },
+    {
+        "question": "What are the .NET objects and classes used to communicate and execute commands at the database?",
+        "answer": "<ul><li>The SqlConnection Object</li><li>The SqlCommand Object</li><li>The SqlDataReader Object</li><li>The DataSet Object</li><li>The SqlDataAdapter Object</li><li>The SqlParameter Object</li></ul>"
+    },
+    {
+        "question": "What are the different types of statements available to you in T-SQL?",
+        "answer": "<ul><li>UPDATE</li><li>INSERT</li><li>SELECT</li><li>DELETE</li></ul>"
     }
 ]
