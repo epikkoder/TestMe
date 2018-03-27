@@ -124,7 +124,7 @@
         "answer": "<p>SQL injection is an attack in which malicious code is inserted into strings that are later passed to an instance of SQL Server for parsing and execution in order to effect the execution of predefined SQL commands.</p><p>A SQL injection attack is a form of attack that comes from user input that has not been checked to see that it is valid. The objective is to fool the database system into running malicious code that will reveal sensitive information or otherwise compromise the server.</p>"
     },
     {
-        "question": "How do you protect yourself against these?",
+        "question": "How do you protect yourself against SQL injection attacks?",
         "answer": "<p>Using a combination of stored procedures and parameters. Stored procedures alone will not protect against SQL injection attacks because you still need to use them correctly.</p>"
     },
     {
