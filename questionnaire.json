@@ -188,5 +188,15 @@
         "id": 38,
         "question": "What are the different types of statements available to you in T-SQL?",
         "answer": "<ul><li>UPDATE</li><li>INSERT</li><li>SELECT</li><li>DELETE</li></ul>"
+    },
+    {
+        "id": 39,
+        "question": "What are indexes?",
+        "answer": "<p>Indexes are created on columns in tables or views. The index provides a fast way to look up data based on the values within those columns. For example, if you create an index on the primary key and then search for a row of data based on one of the primary key values, SQL Server first finds that value in the index, and then uses the index to quickly locate the entire row of data. Without the index, a table scan would have to be performed in order to locate the row, which can have a significant effect on performance. You would add indexes to columns that you would filter or join off of.</p>"
+    },
+    {
+        "id": 40,
+        "question": "If you wanted to delete information from a table, what statement would you use?",
+        "answer": "<code>DELETE FROM [Table_name]<br>(WHERE condition)</code>"
     }
 ]
