@@ -1,153 +1,191 @@
 [
     {
+        "id": 1,
         "question": "What is serialization?",
         "answer": "<p>Packaging data for transport. Serialization is the process of converting an object into a form that can be readily transported. The <code>$.serialize()</code> method creates a text string of name/value pairs that can be sent to a server in an AJAX request. It can act on a jQuery object that has selected individual form controls, such as <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, and <code>&lt;select&gt;</code>: <code>$('input, textarea, select').serialize();</code>. It is typically easier, however, to select the <code>&lt;form&gt;</code> itself for serialization: <code>$('#formData').serialize();</code></p>"
     },
     {
+        "id": 2,
         "question": "What types of serialization are you familiar with?",
         "answer": "<p><code>$.serialize()</code> - Only form elements are examined for inputs they contain. A form is serialized to a name-value pair string that can be sent to a server in an AJAX request.</p><p>Other types:</p><ul><li>SOAP serialization</li><li>Binary serialization</li><li>XML Serialization</li><li>JSON Serialization</li></ul>"
     },
     {
+        "id": 3,
         "question": "What are the benefits of JSON serialization over XML serialization?",
         "answer": "<p>XML (Extensible Markup Language) serialization serializes only the public fields and property values of an object into an XML stream. XML serialization does not include type information.</p><p>The biggest reason that JSON is now being used over XML is that JSON is inherently more efficient. It is lightweight, fewer bits are being transferred, and less machine time is required to process data (on either end).</p>"
     },
     {
+        "id": 4,
         "question": "Write out the JSON for the following Contact object: Bob Smith is 30 years old and has two direct reports. They are Sally Smith, 30 y/o, and Jane Doe, 34 y/o",
         "answer": "<pre>{\n&#32;&#32;&quot;firstName&quot;:&#32;&quot;Bob&quot;,\n&#32;&#32;&quot;lastName&quot;:&#32;&quot;Smith&quot;,\n&#32;&#32;&quot;age&quot;:&#32;30,\n&#32;&#32;&quot;reports&quot;:&#32;[\n&#32;&#32;&#32;&#32;{\n&#32;&#32;&#32;&#32;&#32;&#32;&quot;firstName&quot;:&#32;&quot;Sally&quot;,\n&#32;&#32;&#32;&#32;&#32;&#32;&quot;lastName&quot;:&#32;&quot;Smith&quot;,\n&#32;&#32;&#32;&#32;&#32;&#32;&quot;age&quot;:&#32;30\n&#32;&#32;&#32;&#32;},\n&#32;&#32;&#32;&#32;{\n&#32;&#32;&#32;&#32;&#32;&#32;&quot;firstName&quot;:&#32;&quot;Jane&quot;,\n&#32;&#32;&#32;&#32;&#32;&#32;&quot;lastName&quot;:&#32;&quot;Doe&quot;,\n&#32;&#32;&#32;&#32;&#32;&#32;&quot;age&quot;:&#32;34\n&#32;&#32;&#32;&#32;}\n&#32;&#32;]\n}</pre>"
     },
     {
+        "id": 5,
         "question": "Write out the .NET class for that Contact object in the previous question.",
         "answer": "<pre>public class Contact\n{\n&#32;&#32;&#32;&#32;public string FirstName {get; set;}\n&#32;&#32;&#32;&#32;public string LastName {get; set;}\n&#32;&#32;&#32;&#32;public int Age {get; set;}\n&#32;&#32;&#32;&#32;public Contact[] Reports {get; set;}\n}\n\nContact Bob = new Contact();</pre>"
     },
     {
+        "id": 6,
         "question": "How do you validate using DataAnnotations?",
         "answer": "<ol><li>Decorate or &quot;annotate&quot; your models with a specific set of attributes that tell the .NET framework what you expect from each property.</li><li>Invoke a check of these attributes or rules at the controller level before you do anything else and return an error if the data is not valid. To check if the data was properly submitted, we invoke the check and respond appropriately.</li></ol>"
     },
     {
+        "id": 7,
         "question": "What namespace do these attributes live in? (i.e. What namespace do the data attributes (server validation) in .NET belong to (what library?))",
         "answer": "<p><code>using System.ComponentModel.DataAnnotations</code></p>"
     },
     {
+        "id": 8,
         "question": "What are the different types of validations that these attributes let you perform?",
         "answer": "<p>StringLength (designates max and min number of characters)</p><p>Required</p><p>Range</p><p>RegularExpression</p><p>DataType (such as email and phone number)</p><p>EnumDataType</p><p>CustomValidation</p><p>Validation (Serves as a base class for validation attributes)</p>"
     },
     {
+        "id": 9,
         "question": "Decorate this class to the following specs: First/Last Name should be at least 3 chars long and no more than 50, Age should be at least 18 years old.",
         "answer": "<pre>[StringLength(50, MinimumLength = 3)]\npublic string FirstName {get; set;}\n\n[StringLength(50, MinimumLength = 3)]\npublic string LastName {get; set;}\n\n[Range(18, 120)]Model\npublic int Age {get; set;}</pre>"
     },
     {
+        "id": 10,
         "question": "What is Model Binding? Why is it important?",
         "answer": "<p>The ASP.NET MVC framework provides the model binding that greatly simplifies the process of data type conversion and mapping the input values to properties. The framework retrieves the data, maps data to object properties, validates the data and passes the model object to the controller as parameter. Model binding creates and populates the objects that the controller actions require.</p><p>Model binding retrieves data from requests, populates controller action parameters, takes care of the property mapping and type casting typically involved in working with ASP.NET request data.</p>"
     },
     {
+        "id": 11,
         "question": "What are fundamentals that a developer should consider when working to wire up model binding correctly?",
         "answer": "<p>Have the corresponding properties in HTML <code>&lt;input&gt;</code> tags nested in <code>&lt;form&gt;</code> tags. Ensure that the &quot;name&quot; attribute matches the property in the model.</p>"
     },
     {
+        "id": 12,
         "question": "What are ApiControllers?",
         "answer": "<p>ApiControllers are specialized in returning data. Provide a REST-ful API by convention.</p><p>&quot;Regular&quot; Controller - contains ActionResult classes that return a View.</p>"
     },
     {
+        "id": 13,
         "question": "When creating a new controller, what class do you inherit from?",
         "answer": "<p>&quot;regular&quot; Controller inherits from Controller</p><p>ApiController inherits from ApiController</p>"
     },
     {
+        "id": 14,
         "question": "What are the basic elements that exist in all HTML pages between the start and closing <code>&lt;html&gt;</code> tags?",
         "answer": "<p>head</p><p>body</p>"
     },
     {
+        "id": 15,
         "question": "Describe the relationship between HTML, CSS, and Javascript.",
         "answer": "<p>HTML (Hypertext Markup Language) - used for structuring content</p><p>CSS (Cascading Style Sheets) - used for applying visual styles</p><p>Javascript - interacts with and manipulate HTML</p>"
     },
     {
+        "id": 16,
         "question": "What is jQuery? Is it required to build HTML pages? Is it required to build interactivity into your web pages?",
         "answer": "<p>jQuery is a concise and fast Javascript library that can be used to simplify event handling, HTML document traversing, AJAX interactions and animation for speedy website development.</p><p>No, not required for interactivity</p>"
     },
     {
+        "id": 17,
         "question": "How do you capture the first time the HTML document is ready to be manipulated? Write out two different ways to accomplish this task.",
         "answer": "<code>$(document).ready()</code><p>All three of the following syntaxes are equivalent:</p><ul><li><code>$(document).ready(handler)</code></li><li><code>$().ready(handler)</code>(this is not recommended)</li><li><code>$(handler)</code></li></ul>"
     },
     {
+        "id": 18,
         "question": "How many times does the &quot;document ready&quot; event fire?",
         "answer": "<p>once</p>"
     },
     {
+        "id": 19,
         "question": "Describe the main differences or considerations between C# and Javascript.",
         "answer": "<p>C# is strongly-typed language, and Javascript is a non-typed scripting language.</p>"
     },
     {
+        "id": 20,
         "question": "What is AJAX? When do you use it? Why would you use it?",
         "answer": "<p>AJAX stands for <strong>A</strong>synchronous <strong>Ja</strong>vascript and <strong>X</strong>ML.</p><p>AJAX is a technique for creating fast and dynamic web pages. AJAX allows web pages to be updated asynchronously by exchanging small amounts of data with the server behind the scenes. This means that it is possible to update parts of a web page, without reloading the whole page.</p>"
     },
     {
+        "id": 21,
         "question": "What does it mean to be a .NET MVC application?",
         "answer": "<p>An application written in C# that implements the MVC design pattern, which has a high degree of separation of concern. The Model is properties of data, the Controller is business logic, and the View is for presentation.</p>"
     },
     {
+        "id": 22,
         "question": "Does .NET support other types of web applications?",
         "answer": "<p>Yes. Example: Web Forms (still some separation of concern, but all routing is gone)</p>"
     },
     {
+        "id": 23,
         "question": "What are Namespaces? What are they used for?",
         "answer": "<p>Namespaces are heavily used in C# programming in two ways. First, the .NET framework uses namespaces to organize its many classes.</p><p>Second, declaring your own namespaces can help you control the scope of class and method names in larger programming projects. Use the <code>namespace</code> keyword to declare a namespace, as in the following example:</p><pre>namespace SampleNamespace\n{\n&#32;&#32;&#32;&#32;class SampleClass\n&#32;&#32;&#32;&#32;{\n&#32;&#32;&#32;&#32;}\n}</pre>"
     },
     {
+        "id": 24,
         "question": "Are Namespaces a client side or server side construct?",
         "answer": "<p>Both client and server side</p>"
     },
     {
+        "id": 25,
         "question": "What is a database?",
         "answer": "<p>A database is a collection of information that is organized so that it can easily be accessed, managed, and updated.</p>"
     },
     {
+        "id": 26,
         "question": "What is a relational database?",
         "answer": "<p>A relational database is a collection of data items organized as a set of formally-described tables from which data can be accessed or reassembled in many different ways without having to reorganize the database tables.</p><p>The standard user and application program interface to a relational database is the <em>structured query language</em> (SQL). SQL statements are used both for interactive queries for information from a relational database and for gathering data for reports.</p>"
     },
     {
+        "id": 27,
         "question": "What is a database &quot;table&quot;?",
         "answer": "<p>A table contains one or more data categories in columns. Each row contains a unique instance of data for the categories defined by the columns.</p>"
     },
     {
+        "id": 28,
         "question": "What is a primary key?",
         "answer": "<p>The PRIMARY KEY constraint uniquely identifies each record in a database table. A primary key column cannot contain NULL values. Most tables should have a primary key, and each table can have only ONE primary key.</p><p>Column or set of columns that uniquely identifies a record.</p>"
     },
     {
+        "id": 29,
         "question": "What is a foreign key?",
         "answer": "<p>A FOREIGN KEY in one table points to a PRIMARY KEY in another table.</p>"
     },
     {
+        "id": 30,
         "question": "How many of each can one table have?",
         "answer": "<p>primary key: one</p><p>foreign key: Microsoft says, &quot;Although a table can contain an unlimited number of FOREIGN KEY constraints, the recommended maximum is 253. Depending on the hardware configuration hosting SQL Server, specifying additional FOREIGN KEY constraints may be expensive for the query optimizer to process.&quot;</p>"
     },
     {
+        "id": 31,
         "question": "What is a SQL Injection Attack?",
         "answer": "<p>SQL injection is an attack in which malicious code is inserted into strings that are later passed to an instance of SQL Server for parsing and execution in order to effect the execution of predefined SQL commands.</p><p>A SQL injection attack is a form of attack that comes from user input that has not been checked to see that it is valid. The objective is to fool the database system into running malicious code that will reveal sensitive information or otherwise compromise the server.</p>"
     },
     {
+        "id": 32,
         "question": "How do you protect yourself against SQL injection attacks?",
         "answer": "<p>Using a combination of stored procedures and parameters. Stored procedures alone will not protect against SQL injection attacks because you still need to use them correctly.</p>"
     },
     {
+        "id": 33,
         "question": "What is a SQL Server stored procedure?",
         "answer": "<p>Prepared SQL code that you save to perform repetitive tasks or to perform database operations used in conjunction with web applications.</p>"
     },
     {
+        "id": 34,
         "question": "What language is used to write stored procedures?",
         "answer": "<p>SQL & T-SQL</p>"
     },
     {
+        "id": 35,
         "question": "What language do you use to communicate with the database?",
         "answer": "<p>SQL</p>"
     },
     {
+        "id": 36,
         "question": "What is the generic name of the library used in .NET that is used to communicate with databases?",
         "answer": "<p>ADO.NET</p>"
     },
     {
+        "id": 37,
         "question": "What are the .NET objects and classes used to communicate and execute commands at the database?",
         "answer": "<ul><li>The SqlConnection Object</li><li>The SqlCommand Object</li><li>The SqlDataReader Object</li><li>The DataSet Object</li><li>The SqlDataAdapter Object</li><li>The SqlParameter Object</li></ul>"
     },
     {
+        "id": 38,
         "question": "What are the different types of statements available to you in T-SQL?",
         "answer": "<ul><li>UPDATE</li><li>INSERT</li><li>SELECT</li><li>DELETE</li></ul>"
     }
