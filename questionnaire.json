@@ -198,5 +198,25 @@
         "id": 40,
         "question": "If you wanted to delete information from a table, what statement would you use?",
         "answer": "<code>DELETE FROM [Table_name]<br>(WHERE condition)</code>"
+    },
+    {
+        "id": 41,
+        "question": "What is the truncate statement used for? What is the key difference between this and your other options to remove data?",
+        "answer": "<p>Removes all rows from a table without logging the individual row deletions. <code>TRUNCATE TABLE</code> is similar to the <code>DELETE</code> statement (with no <code>WHERE</code> clause); however, <code>TRUNCATE TABLE</code> is faster and uses fewer system and transaction log resources.</p>"
+    },
+    {
+        "id": 42,
+        "question": "What are the basic parts of a simple T-SQL query?",
+        "answer": "<pre>SELECT [<em>column</em>]\nFROM [<em>table</em>]"
+    },
+    {
+        "id": 43,
+        "question": "When are &quot;Joins&quot; used?",
+        "answer": "SQL joins are used to combine rows from two or more tables."
+    },
+    {
+        "id": 44,
+        "question": "What are the different type of Joins?",
+        "answer": "<p>INNER JOIN: Returns all rows when there is at least one match in BOTH tables</p><p>LEFT JOIN: Return all rows from the left table, and the matched rows from the right table</p><p>RIGHT JOIN: Return all rows from the right table, and the matched rows from the left table</p><p>FULL JOIN: Return all rows when there is a match in ONE of the tables</p>"
     }
 ]
