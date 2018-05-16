@@ -218,5 +218,20 @@
         "id": 44,
         "question": "What are the different type of Joins?",
         "answer": "<p>INNER JOIN: Returns all rows when there is at least one match in BOTH tables</p><p>LEFT JOIN: Return all rows from the left table, and the matched rows from the right table</p><p>RIGHT JOIN: Return all rows from the right table, and the matched rows from the left table</p><p>FULL JOIN: Return all rows when there is a match in ONE of the tables</p>"
+    },
+    {
+        "id": 45,
+        "question": "What is data normalization?",
+        "answer": "<p>Database normalization, or data normalization, is a technique to organize the contents of the tables for transactional databases and data warehouses - to avoid redundancy. When you normalize a database, you have four goals:</p><ol><li>arranging data into logical groupings such that each group describes a small part of the whole</li><li>minimizing the amount of duplicate data stored in a database</li><li>organizing the data such that, when you modify it, you make the change in only one place</li><li>building a database in which you can access and manipulate the data quickly and efficiently without compromising the integrity of the data in storage</li></ol><p>Normalization is usually for minimizing errors and data duplication, to <em>de</em>normalize is for reporting.</p>"
+    },
+    {
+        "id": 46,
+        "question": "Why would we go through the process of normalizing our data?",
+        "answer": "<p>Normalization is part of successful database design; without normalization, database systems can be inaccurate, slow, and inefficient, and they might not produce the data you expect.</p>"
+    },
+    {
+        "id": 47,
+        "question": "How many normal forms are there?",
+        "answer": "<p>five (Follow-up explanation: The normal forms defined in relational database theory represent guidelines for record design in coherence with data normalization. <a href='http://www.bkent.net/Doc/simple5.htm' target='_blank'>http://www.bkent.net/Doc/simple5.htm</a>)</p>"
     }
 ]
