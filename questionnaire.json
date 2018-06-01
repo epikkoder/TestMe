@@ -233,5 +233,25 @@
         "id": 47,
         "question": "How many normal forms are there?",
         "answer": "<p>five (Follow-up explanation: The normal forms defined in relational database theory represent guidelines for record design in coherence with data normalization. <a href='http://www.bkent.net/Doc/simple5.htm' target='_blank'>http://www.bkent.net/Doc/simple5.htm</a>)</p>"
+    },
+    {
+        "id": 48,
+        "question": "What are cookies? What are they used for?",
+        "answer": "<p>A very small text file placed on your hard drive by a web page server. It is essentially your identification card. In this file, various information can be stored, from pages visited on the site, to information voluntarily given to the site.</p><p>Used to keep track of your movements within the site, help you resume where you left off, remember your registered login (authentication), theme selection, preferences, and other customization functions.</p>"
+    },
+    {
+        "id": 49,
+        "question": "As a developer, where can you find the cookies you have per site/URL?",
+        "answer": "<p>They can be seen in 1 of several places in your developer tools. You could download cookie Chrome extensions to manage and view easier.</p>"
+    },
+    {
+        "id": 50,
+        "question": "How does your browser manage cookies across all the sites you visit?",
+        "answer": "<p>At the domain.</p>"
+    },
+    {
+        "id": 51,
+        "question": "Describe the Request-Response lifecycle of a typical request made by your browser.",
+        "answer": "<ol><li>A Request (which contains the HTTP request method, cookies, URL, and data all inside headers) is made to the web server.</li><li>When it gets to the web server, the domain portion of the URL is used to route the request to a web application.</li><li>Inside the web application, the router takes over and matches the route and the HTTP method from the route table to an endpoint.</li><li>If the method takes non-model parameters, the parameters are also considered in routing.</li><li>Authentication then Authorization of the request takes place.</li><li>Model binding/parameter binding takes place.</li><li>It proceeds to send data to the specific method in the controller and it completes the request by sending an appropriate response to the browser. (discuss possible things that can happen inside the MiC [endpoint] i.e. model-validation, service calls)</li></ol>"
     }
 ]
